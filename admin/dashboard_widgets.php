@@ -105,7 +105,7 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
                     </tfoot>
                 </table>
                 <br>
-                <a href="admin.php?page=wpbm-dashboard" class="button-primary right"><?php _e('View Links','wpmbil'); ?></a>
+                <a href="admin.php?page=wpmb-dashboard" class="button-primary right"><?php _e('View Links','wpmbil'); ?></a>
                 <div class="clear"></div>
                 <?php
             }

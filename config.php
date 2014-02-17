@@ -20,14 +20,14 @@ if(!class_exists('WPMB_Config')){
 
             //include scripts
             add_action( 'admin_print_scripts-index.php', array( $this, 'includeScripts'));
-            add_action( 'admin_print_scripts-toplevel_page_wpbm-dashboard', array( $this, 'includeScripts' ));
-            add_action( 'admin_print_scripts-incoming-links_page_wpbm-settings', array( $this, 'includeScripts' ));
-            
-            
+            add_action( 'admin_print_scripts-toplevel_page_wpmb-dashboard', array( $this, 'includeScripts' ));
+            add_action( 'admin_print_scripts-incoming-links_page_wpmb-settings', array( $this, 'includeScripts' ));
+
+
             //include styles
             add_action( 'admin_print_styles-index.php', array( $this, 'includeStyles'));
-            add_action( 'admin_print_styles-toplevel_page_wpbm-dashboard', array( $this, 'includeStyles' ));
-            add_action( 'admin_print_styles-incoming-links_page_wpbm-settings', array( $this, 'includeStyles' ));            
+            add_action( 'admin_print_styles-toplevel_page_wpmb-dashboard', array( $this, 'includeStyles' ));
+            add_action( 'admin_print_styles-incoming-links_page_wpmb-settings', array( $this, 'includeStyles' ));
         }
 
         /*
@@ -38,7 +38,7 @@ if(!class_exists('WPMB_Config')){
         }
         public function includeStyles(){
         	wp_enqueue_style( 'wpmb_css',plugins_url('/admin/css/wpmb.css', __FILE__), false, '1.0.0' );
-        }        
+        }
 
         private function getPluginPath(){
             /*
@@ -89,7 +89,7 @@ if(!class_exists('WPMB_Config')){
             return $schedules; // Do not forget to give back the list of schedules!
         }
     }
-    
+
 }
 $GLOBALS['WPMB_Config'] = new WPMB_Config();
 

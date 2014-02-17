@@ -373,7 +373,7 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                           <em>
                                             <strong>Tip: </strong>
                                             The maximum number of links from the same domain is <strong>X</strong>.
-                                            You can change it in the <a href="admin.php?page=wpbm-settings">settings page</a>.
+                                            You can change it in the <a href="admin.php?page=wpmb-settings">settings page</a>.
                                           </em>
                                         </div>
                                         <br>

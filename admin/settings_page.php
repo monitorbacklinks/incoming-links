@@ -34,7 +34,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
         }
 
         public function WPMB_settings_link($links) {
-            $settings_link = '<a href="'. get_admin_url(null, 'admin.php?page=wpbm-settings') .'">'.__('Settings','wpmbil').'</a>';
+            $settings_link = '<a href="'. get_admin_url(null, 'admin.php?page=wpmb-settings') .'">'.__('Settings','wpmbil').'</a>';
             array_unshift($links, $settings_link);
             return $links;
         }
@@ -45,7 +45,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
             $wpdb->query("DELETE FROM ".$wpdb->prefix . "backlinks_block_domain");
             $wpdb->query("DELETE FROM ".$wpdb->prefix . "backlinks_block_ip");
             $wpdb->query("DELETE FROM ".$wpdb->prefix . "backlinks_cron");
-           
+
             // Reset options to default
             delete_option('wmpb_backlinks_config');
             WPMB_Install::create_config_option();
@@ -54,8 +54,8 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
             if(isset($_POST['ajax'])){
             	echo json_encode(array('status'=>true,'message'=>__('All data successful removed.','wpmbil')));
             	die();
-            }            
-            
+            }
+
             return array('status'=>true,'message'=>__('All data successful removed.','wpmbil'));
 
         }
@@ -69,15 +69,15 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
             }
 
             /*Prepare data before save*/
-            
+
             	//Re-schedule emails
-            	
+
 	            $schedule = wp_get_schedule( 'email_wpmb_event');
 	            if($schedule){
 	            	wp_clear_scheduled_hook( 'email_wpmb_event' );
 	            }
-	            $timezone = time() - (int) current_time( 'timestamp' );            	
-            	
+	            $timezone = time() - (int) current_time( 'timestamp' );
+
             	if ($options['email_frequency']) {
             		//Calculate seconds from now
             		//daily
@@ -93,15 +93,15 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
             			$day = date('d', strtotime('next '.strtolower($options['email_frequency_day'])));
             			$month = date('m', strtotime('next '.strtolower($options['email_frequency_day'])));
             			$year = date('Y', strtotime('next '.strtolower($options['email_frequency_day'])));
-            	
+
             			$email_frequency_hour_min = explode(':',$options['email_frequency_hour_min']);
             			$start = strtotime($year.'-'. $month .'-'. $day .' ' . $email_frequency_hour_min[0] . ':' . (isset($email_frequency_hour_min[1])?$email_frequency_hour_min[1]:'00') . ':00');
-   
+
             		}
             		wp_schedule_event( $start + $timezone, $options['email_frequency'], 'email_wpmb_event');
             	}
-            	 
-            
+
+
                 //Exclude domains using excerpts, convert data from string to array
                 if(isset($options['exclude_domains_sing_excerpts'])){
                     $options['exclude_domains_sing_excerpts'] = array_map('trim', explode(',',stripslashes($options['exclude_domains_sing_excerpts'])));
@@ -597,7 +597,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                         <div class="meta-box-sortables">
 
                             <div class="postbox">
-                            
+
                                 <h3><span><?php _e('How does it work?','wpmbil'); ?></span></h3>
                                 <div class="inside">
                                     <div><a href="http://monitorbacklinks.com/blog/incoming-links/"><img src="<?php echo plugins_url( 'images/incoming-links.png' , __FILE__ ); ?>" /></a></div>
@@ -608,7 +608,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
 
                             </div> <!-- .postbox -->
 
-                            
+
                             <div class="postbox">
 
                                 <h3><span><?php _e('Support & Reviews','wpmbil'); ?></span></h3>
@@ -620,20 +620,20 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <br /><br />
                                 	<div><a href="#"><img src="<?php echo plugins_url( 'images/reviews.png' , __FILE__ ); ?>" /></a></div>
                                     <span class="wpmbdesc"><?php echo  __('Your opinions and reviews are very important, write one','wpmbil').' <a href="http://wordpress.org/support/view/plugin-reviews/incoming-links/">'.__('now','wpmbil').'</a>!'; ?></span>
-                                </div> <!-- .inside -->                                
+                                </div> <!-- .inside -->
 
                             </div> <!-- .postbox -->
-                            
+
                             <div class="postbox">
 
                                 <h3><span><?php _e('About us','wpmbil'); ?></span></h3>
                                 <div class="inside">
 									<div class="mbl-logo"><a href="http://monitorbacklinks.com"><img src="<?php echo plugins_url( 'images/monitorbacklinks.png' , __FILE__ ); ?>" /></a></div>
                                 	<span class="wpmbdesc"><?php echo  __('Monitor Backlinks provides professional link monitoring services. A powerful, must have tool for SEOs and Web Marketers,','wpmbil').' <a href="http://monitorbacklinks.com">'.__('read more','wpmbil').'</a>!'; ?></span>
-                                </div> <!-- .inside -->                                
+                                </div> <!-- .inside -->
 
-                            </div> <!-- .postbox -->     
-                            
+                            </div> <!-- .postbox -->
+
                         </div> <!-- .meta-box-sortables -->
 
                     </div> <!-- #postbox-container-1 .postbox-container -->
@@ -669,7 +669,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                                 <?php
                                                 if($totalIp && $WPMB_Settings->settings->items_per_page_blocked){
                                                     echo paginate_links( array(
-                                                        'base'=>'?page=wpbm-settings&pagedIp=%#%',
+                                                        'base'=>'?page=wpmb-settings&pagedIp=%#%',
                                                         'current' => max(1,(isset($_GET['pagedIp'])?$_GET['pagedIp']:'1')) ,
                                                         'format' => '?pagedIp=%#%',
                                                         'total' => ceil($totalIp/$WPMB_Settings->settings->items_per_page_blocked),
@@ -689,7 +689,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
 		                                        </table>
 		                                        <input type="hidden" name="action" value="add_block_ip">
 		                                        <input type="hidden" name="ajax" value="true">
-		                                    </form></div>                                            
+		                                    </form></div>
 		                                    </div>
                                     <br>
                                     <?php
@@ -720,7 +720,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                         <?php
                                         if($totalIp && $WPMB_Settings->settings->items_per_page_blocked){
                                             echo paginate_links( array(
-                                                'base'=>'?page=wpbm-settings&pagedIp=%#%',
+                                                'base'=>'?page=wpmb-settings&pagedIp=%#%',
                                                 'current' => max(1,(isset($_GET['pagedIp'])?$_GET['pagedIp']:'1')),
                                                 'format' => '?pagedIp=%#%',
                                                 'total' => ceil($totalIp/$WPMB_Settings->settings->items_per_page_blocked),
@@ -743,7 +743,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                         <div class="meta-box-sortables">
 
                             <div class="postbox">
-                            
+
                                 <h3><span><?php _e('How does it work?','wpmbil'); ?></span></h3>
                                 <div class="inside">
                                     <div><a href="http://monitorbacklinks.com/blog/incoming-links/"><img src="<?php echo plugins_url( 'images/incoming-links.png' , __FILE__ ); ?>" /></a></div>
@@ -754,7 +754,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
 
                             </div> <!-- .postbox -->
 
-                            
+
                             <div class="postbox">
 
                                 <h3><span><?php _e('Support & Reviews','wpmbil'); ?></span></h3>
@@ -766,20 +766,20 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <br /><br />
                                 	<div><a href="#"><img src="<?php echo plugins_url( 'images/reviews.png' , __FILE__ ); ?>" /></a></div>
                                     <span class="wpmbdesc"><?php echo  __('Your opinions and reviews are very important, write one','wpmbil').' <a href="http://wordpress.org/support/view/plugin-reviews/incoming-links/">'.__('now','wpmbil').'</a>!'; ?></span>
-                                </div> <!-- .inside -->                                
+                                </div> <!-- .inside -->
 
                             </div> <!-- .postbox -->
-                            
+
                             <div class="postbox">
 
                                 <h3><span><?php _e('About us','wpmbil'); ?></span></h3>
                                 <div class="inside">
 									<div class="mbl-logo"><a href="http://monitorbacklinks.com"><img src="<?php echo plugins_url( 'images/monitorbacklinks.png' , __FILE__ ); ?>" /></a></div>
                                 	<span class="wpmbdesc"><?php echo  __('Monitor Backlinks provides professional link monitoring services. A powerful, must have tool for SEOs and Web Marketers,','wpmbil').' <a href="http://monitorbacklinks.com">'.__('read more','wpmbil').'</a>!'; ?></span>
-                                </div> <!-- .inside -->                                
+                                </div> <!-- .inside -->
 
-                            </div> <!-- .postbox -->     
-                            
+                            </div> <!-- .postbox -->
+
                         </div> <!-- .meta-box-sortables -->
 
                     </div> <!-- #postbox-container-1 .postbox-container -->
@@ -817,7 +817,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                                 <?php
                                                 if($totalDomains && $WPMB_Settings->settings->items_per_page_blocked){
                                                     echo paginate_links( array(
-                                                        'base'=>'?page=wpbm-settings&pagedDomains=%#%',
+                                                        'base'=>'?page=wpmb-settings&pagedDomains=%#%',
                                                         'current' => max(1,(isset($_GET['pagedDomains'])?$_GET['pagedDomains']:'1')),
                                                         'format' => '?pagedDomains=%#%',
                                                         'total' => ceil($totalDomains/$WPMB_Settings->settings->items_per_page_blocked),
@@ -870,7 +870,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                             <?php
                                             if($totalDomains && $WPMB_Settings->settings->items_per_page_blocked){
                                                 echo paginate_links( array(
-                                                    'base'=>'?page=wpbm-settings&pagedDomains=%#%',
+                                                    'base'=>'?page=wpmb-settings&pagedDomains=%#%',
                                                     'current' => max(1,(isset($_GET['pagedDomains'])?$_GET['pagedDomains']:'1')),
                                                     'format' => '?pagedDomains=%#%',
                                                     'total' => ceil($totalDomains/$WPMB_Settings->settings->items_per_page_blocked),
@@ -894,7 +894,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                         <div class="meta-box-sortables">
 
                             <div class="postbox">
-                            
+
                                 <h3><span><?php _e('How does it work?','wpmbil'); ?></span></h3>
                                 <div class="inside">
                                     <div><a href="http://monitorbacklinks.com/blog/incoming-links/"><img src="<?php echo plugins_url( 'images/incoming-links.png' , __FILE__ ); ?>" /></a></div>
@@ -905,7 +905,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
 
                             </div> <!-- .postbox -->
 
-                            
+
                             <div class="postbox">
 
                                 <h3><span><?php _e('Support & Reviews','wpmbil'); ?></span></h3>
@@ -917,20 +917,20 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <br /><br />
                                 	<div><a href="#"><img src="<?php echo plugins_url( 'images/reviews.png' , __FILE__ ); ?>" /></a></div>
                                     <span class="wpmbdesc"><?php echo  __('Your opinions and reviews are very important, write one','wpmbil').' <a href="http://wordpress.org/support/view/plugin-reviews/incoming-links/">'.__('now','wpmbil').'</a>!'; ?></span>
-                                </div> <!-- .inside -->                                
+                                </div> <!-- .inside -->
 
                             </div> <!-- .postbox -->
-                            
+
                             <div class="postbox">
 
                                 <h3><span><?php _e('About us','wpmbil'); ?></span></h3>
                                 <div class="inside">
 									<div class="mbl-logo"><a href="http://monitorbacklinks.com"><img src="<?php echo plugins_url( 'images/monitorbacklinks.png' , __FILE__ ); ?>" /></a></div>
                                 	<span class="wpmbdesc"><?php echo  __('Monitor Backlinks provides professional link monitoring services. A powerful, must have tool for SEOs and Web Marketers,','wpmbil').' <a href="http://monitorbacklinks.com">'.__('read more','wpmbil').'</a>!'; ?></span>
-                                </div> <!-- .inside -->                                
+                                </div> <!-- .inside -->
 
-                            </div> <!-- .postbox -->     
-                            
+                            </div> <!-- .postbox -->
+
                         </div> <!-- .meta-box-sortables -->
 
                     </div> <!-- #postbox-container-1 .postbox-container -->
@@ -967,7 +967,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                             <?php
                                             if($totalRef && $WPMB_Settings->settings->items_per_page_blocked){
                                                 echo paginate_links( array(
-                                                    'base'=>'?page=wpbm-settings&pagedRef=%#%',
+                                                    'base'=>'?page=wpmb-settings&pagedRef=%#%',
                                                     'current' => max(1,(isset($_GET['pagedRef'])?$_GET['pagedRef']:'1')),
                                                     'format' => '?pagedDomains=%#%',
                                                     'total' => ceil($totalRef/$WPMB_Settings->settings->items_per_page_blocked),
@@ -989,7 +989,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
 	                                        <input type="hidden" name="action" value="add_block_referrer">
 	                                        <input type="hidden" name="ajax" value="true">
 	                                    </form>
-	                                    </div>                                        
+	                                    </div>
                                     </div>
                                     <br>
                                     <?php
@@ -1020,7 +1020,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                         <?php
                                         if($totalRef && $WPMB_Settings->settings->items_per_page_blocked){
                                             echo paginate_links( array(
-                                                'base'=>'?page=wpbm-settings&pagedRef=%#%',
+                                                'base'=>'?page=wpmb-settings&pagedRef=%#%',
                                                 'current' => max(1,(isset($_GET['pagedRef'])?$_GET['pagedRef']:'1')) ,
                                                 'format' => '?pagedDomains=%#%',
                                                 'total' => ceil($totalRef/$WPMB_Settings->settings->items_per_page_blocked),
@@ -1042,7 +1042,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                         <div class="meta-box-sortables">
 
                             <div class="postbox">
-                            
+
                                 <h3><span><?php _e('How does it work?','wpmbil'); ?></span></h3>
                                 <div class="inside">
                                     <div><a href="http://monitorbacklinks.com/blog/incoming-links/"><img src="<?php echo plugins_url( 'images/incoming-links.png' , __FILE__ ); ?>" /></a></div>
@@ -1053,7 +1053,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
 
                             </div> <!-- .postbox -->
 
-                            
+
                             <div class="postbox">
 
                                 <h3><span><?php _e('Support & Reviews','wpmbil'); ?></span></h3>
@@ -1065,22 +1065,22 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <br /><br />
                                 	<div><a href="#"><img src="<?php echo plugins_url( 'images/reviews.png' , __FILE__ ); ?>" /></a></div>
                                     <span class="wpmbdesc"><?php echo  __('Your opinions and reviews are very important, write one','wpmbil').' <a href="http://wordpress.org/support/view/plugin-reviews/incoming-links/">'.__('now','wpmbil').'</a>!'; ?></span>
-                                </div> <!-- .inside -->                                
+                                </div> <!-- .inside -->
 
                             </div> <!-- .postbox -->
-                            
+
                             <div class="postbox">
 
                                 <h3><span><?php _e('About us','wpmbil'); ?></span></h3>
                                 <div class="inside">
 									<div class="mbl-logo"><a href="http://monitorbacklinks.com"><img src="<?php echo plugins_url( 'images/monitorbacklinks.png' , __FILE__ ); ?>" /></a></div>
                                 	<span class="wpmbdesc"><?php echo  __('Monitor Backlinks provides professional link monitoring services. A powerful, must have tool for SEOs and Web Marketers,','wpmbil').' <a href="http://monitorbacklinks.com">'.__('read more','wpmbil').'</a>!'; ?></span>
-                                </div> <!-- .inside -->                                
+                                </div> <!-- .inside -->
 
-                            </div> <!-- .postbox -->     
-                            
+                            </div> <!-- .postbox -->
+
                         </div> <!-- .meta-box-sortables -->
-                        
+
                     </div> <!-- #postbox-container-1 .postbox-container -->
 
                 </div> <!-- #post-body .metabox-holder .columns-2 -->
