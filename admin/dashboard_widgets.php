@@ -30,7 +30,7 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
 
             wp_add_dashboard_widget(
                 'wpmb-statistic-links',         // Widget slug.
-                __('Backlinks Statistic (last 12 months)','wpmbil'),         // Title.
+                __('Backlinks Statistic (last 30 days)','wpmbil'),         // Title.
                 array($this,'wpmb_statistic_links') // Display function.
             );
 
@@ -115,9 +115,9 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
             global $wpdb;
             $stat_data = $wpdb->get_results("SELECT COUNT(id) as count, time
                                              FROM ".$wpdb->prefix."backlinks
-                                             GROUP BY MONTH(time)
+                                             GROUP BY DAY(time)
 											 ORDER BY time
-											 LIMIT 12
+											 LIMIT 30
                                             ");
             if($stat_data){
                 ?>
@@ -126,14 +126,14 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
                     google.load("visualization", "1", {packages:["corechart"]});
                     google.setOnLoadCallback(function () {
                         var data = google.visualization.arrayToDataTable([
-                            ['<?php _e('Months','wpmbil'); ?>', '<?php _e('Backlinks per month','wpmbil'); ?>'],
+                            ['<?php _e('Days','wpmbil'); ?>', '<?php _e('Backlinks','wpmbil'); ?>'],
                             <?php
-							for ($i=12;$i>0;$i--){
-                           		$complete_data[date("Y-m",strtotime("-$i months"))] = 0;
+							for ($i=30;$i>0;$i--){
+                           		$complete_data[date("Y-m-d",strtotime("-$i days"))] = 0;
                            	}
 
                             foreach($stat_data as $item){
-                            	$complete_data[date("Y-m",strtotime($item->time))] = $item->count;
+                            	$complete_data[date("Y-m-d",strtotime($item->time))] = $item->count;
                             }
 
                             foreach($complete_data as $item => $value){
@@ -143,12 +143,12 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
                         ]);
 
                         var options = {
-                            hAxis: {title: '<?php _e('Months','wpmbil'); ?>',  titleTextStyle: {color: '#333'}},
+                            hAxis: {title: '<?php _e('Days','wpmbil'); ?>',  titleTextStyle: {color: '#333'}},
                             legend: {position: 'none'},
-                            chartArea: {width: '85%'},
+                            chartArea: {width: '80%'},
                             vAxis: {minValue: 0},
-              			  	hAxis: { showTextEvery: 2},
-              			  	title: '<?php _e('Backlinks / Month','wpmbil'); ?>'
+              			  	hAxis: { showTextEvery: 7},
+              			  	title: '<?php _e('Backlinks / Day','wpmbil'); ?>'
                         };
 
                         var chart = new google.visualization.AreaChart(document.getElementById('backlink_chart'));
