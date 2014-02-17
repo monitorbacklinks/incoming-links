@@ -616,7 +616,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <div class="mbl-title"><?php _e('Have a question?','wpmbil'); ?></div>
                                     <span class="wpmbdesc"><?php echo  __('You can ask for support','wpmbil').' <a href="http://wordpress.org/support/plugin/incoming-links/">'.__('here','wpmbil').'</a>.'; ?></span>
                                     <br /><br />
-                                    <span class="wpmbdesc"><?php echo  __('This is a beta version, at this stage, please consider','wpmbil').' <a href="https://github.com/RazvanGirmacea/incoming-links/">'.__('submitting a bug','wpmbil').'</a> '.__('instead of rating it','wpmbil'); ?>.</span>
+                                    <span class="wpmbdesc"><?php echo  __('This is a beta version, at this stage, please consider','wpmbil').' <a href="https://github.com/monitorbacklinks/incoming-links/issues">'.__('submitting a bug','wpmbil').'</a> '.__('instead of rating it','wpmbil'); ?>.</span>
                                     <br /><br />
                                 	<div><a href="#"><img src="<?php echo plugins_url( 'images/reviews.png' , __FILE__ ); ?>" /></a></div>
                                     <span class="wpmbdesc"><?php echo  __('Your opinions and reviews are very important, write one','wpmbil').' <a href="http://wordpress.org/support/view/plugin-reviews/incoming-links/">'.__('now','wpmbil').'</a>!'; ?></span>
@@ -762,7 +762,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <div class="mbl-title"><?php _e('Have a question?','wpmbil'); ?></div>
                                     <span class="wpmbdesc"><?php echo  __('You can ask for support','wpmbil').' <a href="http://wordpress.org/support/plugin/incoming-links/">'.__('here','wpmbil').'</a>.'; ?></span>
                                     <br /><br />
-                                    <span class="wpmbdesc"><?php echo  __('This is a beta version, at this stage, please consider','wpmbil').' <a href="https://github.com/RazvanGirmacea/incoming-links/">'.__('submitting a bug','wpmbil').'</a> '.__('instead of rating it','wpmbil'); ?>.</span>
+                                    <span class="wpmbdesc"><?php echo  __('This is a beta version, at this stage, please consider','wpmbil').' <a href="https://github.com/monitorbacklinks/incoming-links/issues">'.__('submitting a bug','wpmbil').'</a> '.__('instead of rating it','wpmbil'); ?>.</span>
                                     <br /><br />
                                 	<div><a href="#"><img src="<?php echo plugins_url( 'images/reviews.png' , __FILE__ ); ?>" /></a></div>
                                     <span class="wpmbdesc"><?php echo  __('Your opinions and reviews are very important, write one','wpmbil').' <a href="http://wordpress.org/support/view/plugin-reviews/incoming-links/">'.__('now','wpmbil').'</a>!'; ?></span>
@@ -913,7 +913,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <div class="mbl-title"><?php _e('Have a question?','wpmbil'); ?></div>
                                     <span class="wpmbdesc"><?php echo  __('You can ask for support','wpmbil').' <a href="http://wordpress.org/support/plugin/incoming-links/">'.__('here','wpmbil').'</a>.'; ?></span>
                                     <br /><br />
-                                    <span class="wpmbdesc"><?php echo  __('This is a beta version, at this stage, please consider','wpmbil').' <a href="https://github.com/RazvanGirmacea/incoming-links/">'.__('submitting a bug','wpmbil').'</a> '.__('instead of rating it','wpmbil'); ?>.</span>
+                                    <span class="wpmbdesc"><?php echo  __('This is a beta version, at this stage, please consider','wpmbil').' <a href="https://github.com/monitorbacklinks/incoming-links/issues">'.__('submitting a bug','wpmbil').'</a> '.__('instead of rating it','wpmbil'); ?>.</span>
                                     <br /><br />
                                 	<div><a href="#"><img src="<?php echo plugins_url( 'images/reviews.png' , __FILE__ ); ?>" /></a></div>
                                     <span class="wpmbdesc"><?php echo  __('Your opinions and reviews are very important, write one','wpmbil').' <a href="http://wordpress.org/support/view/plugin-reviews/incoming-links/">'.__('now','wpmbil').'</a>!'; ?></span>
@@ -1061,7 +1061,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <div class="mbl-title"><?php _e('Have a question?','wpmbil'); ?></div>
                                     <span class="wpmbdesc"><?php echo  __('You can ask for support','wpmbil').' <a href="http://wordpress.org/support/plugin/incoming-links/">'.__('here','wpmbil').'</a>.'; ?></span>
                                     <br /><br />
-                                    <span class="wpmbdesc"><?php echo  __('This is a beta version, at this stage, please consider','wpmbil').' <a href="https://github.com/RazvanGirmacea/incoming-links/">'.__('submitting a bug','wpmbil').'</a> '.__('instead of rating it','wpmbil'); ?>.</span>
+                                    <span class="wpmbdesc"><?php echo  __('This is a beta version, at this stage, please consider','wpmbil').' <a href="https://github.com/monitorbacklinks/incoming-links/issues">'.__('submitting a bug','wpmbil').'</a> '.__('instead of rating it','wpmbil'); ?>.</span>
                                     <br /><br />
                                 	<div><a href="#"><img src="<?php echo plugins_url( 'images/reviews.png' , __FILE__ ); ?>" /></a></div>
                                     <span class="wpmbdesc"><?php echo  __('Your opinions and reviews are very important, write one','wpmbil').' <a href="http://wordpress.org/support/view/plugin-reviews/incoming-links/">'.__('now','wpmbil').'</a>!'; ?></span>

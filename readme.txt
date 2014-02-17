@@ -11,7 +11,7 @@ Keep track of your existing backlinks and automatically detect any new incoming 
 
 == Description ==
 
-This is a beta version, at this stage, please consider [submiting a bug](https://github.com/RazvanGirmacea/incoming-links/) instead of rating it.
+This is a beta version, at this stage, please consider [submiting a bug](https://github.com/monitorbacklinks/incoming-links/issues) instead of rating it.
 
 Every website owner knows how valuable a quality backlink is. All incoming links to a website will play a crucial role in obtaining a higher page rank on Search Engines. For a successful SEO strategy you have to get as many backlinks as possible and also monitor the quality of your new links. Incoming Links is a WordPress plugin provided for free by [Monitor Backlinks](https://monitorbacklinks.com/), which will report all your incoming links and will automatically check the quality of those links (SEO Data like anchor text and the type of link: follow/nofollow).
 
