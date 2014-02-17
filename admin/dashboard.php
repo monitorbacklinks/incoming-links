@@ -230,7 +230,6 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
             $referrers_per_page = $settings->items_per_page_main;
 			$paged = max(1,(isset($_GET['paged'])?$_GET['paged']:'1'));
             $index = $total - ($referrers_per_page * $paged - $referrers_per_page) + 1;
-
             ?>
             <div class="wrap wpmb_dashboard">
                 <form id="posts-filter" action="" method="get">
@@ -371,9 +370,10 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                         <br>
                                         <div class="align-center">
                                           <em>
-                                            <strong>Tip: </strong>
-                                            The maximum number of links from the same domain is <strong>X</strong>.
-                                            You can change it in the <a href="admin.php?page=wpmb-settings">settings page</a>.
+                                            <?php _e('The maximum number of links from the same domain is','wpmbil'); ?>
+                                            <strong><?php echo $settings->limit_links_domain; ?></strong>.
+                                            <?php _e('You can change it in the','wpmbil'); ?>
+                                            <a href="admin.php?page=wpmb-settings"><?php _e('settings page','wpmbil'); ?></a>.
                                           </em>
                                         </div>
                                         <br>
