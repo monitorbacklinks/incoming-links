@@ -41,7 +41,9 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
          */
         public function parse_referrers() {
             // do parse every * time
-            include_once(dirname( __FILE__ ) . '/../lib/phpQuery/phpQuery.php');
+            if (!class_exists('phpQuery')){
+        		include_once(dirname( __FILE__ ) . '/../lib/phpQuery/phpQuery.php');
+            }
             include_once(dirname( __FILE__ ) . '/../admin/block_domains_ips.php');
             global $WPMB_Blocks;
             global $WPMB_Config;
