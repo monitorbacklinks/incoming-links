@@ -1,7 +1,7 @@
 <?php
 Class WPMB_Install{
 
-    public function install(){
+    public static function install(){
         WPMB_Install::create_main_table();
         WPMB_Install::create_cron_table();
         WPMB_Install::create_block_ip_table();
@@ -9,7 +9,7 @@ Class WPMB_Install{
         WPMB_Install::create_config_option();
     }
 
-    private function create_main_table(){
+    private static function create_main_table(){
         global $wpdb;
         $sql = "CREATE TABLE " . $wpdb->prefix . "backlinks (
           id mediumint(11) NOT NULL AUTO_INCREMENT,
@@ -26,7 +26,7 @@ Class WPMB_Install{
         dbDelta( $sql );
     }
 
-    private function create_cron_table(){
+    private static function create_cron_table(){
         global $wpdb;
         $sql = "CREATE TABLE " . $wpdb->prefix . "backlinks_cron (
           id mediumint(11) NOT NULL AUTO_INCREMENT,
@@ -40,7 +40,7 @@ Class WPMB_Install{
         dbDelta( $sql );
     }
 
-    private function create_block_ip_table(){
+    private static function create_block_ip_table(){
         global $wpdb;
         $sql = "CREATE TABLE " . $wpdb->prefix . "backlinks_block_ip (
           id mediumint(11) NOT NULL AUTO_INCREMENT,
@@ -51,7 +51,7 @@ Class WPMB_Install{
         dbDelta( $sql );
     }
 
-    private function create_block_domain_table(){
+    private static function create_block_domain_table(){
         global $wpdb;
         $sql = "CREATE TABLE " . $wpdb->prefix . "backlinks_block_domain (
           id mediumint(11) NOT NULL AUTO_INCREMENT,
@@ -64,7 +64,7 @@ Class WPMB_Install{
     }
 
 
-    static function create_config_option(){
+    public static function create_config_option(){
         //set default configs
         $options = array(
             'email_frequency'=>"0",
