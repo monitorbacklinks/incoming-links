@@ -129,7 +129,8 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
             curl_setopt($ch, CURLOPT_URL, $url);
            // curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
             curl_setopt($ch, CURLOPT_USERAGENT,"MBWP");
-
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 15);
             $data = curl_exec($ch);
             curl_close($ch);
 
