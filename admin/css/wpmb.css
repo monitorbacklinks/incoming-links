@@ -1,0 +1,153 @@
+/* -----Dashboard style--------*/
+    .wpmb_dashboard #the-list tr td{
+        vertical-align: middle;
+    }
+    .wpmb_dashboard .type .follow,
+    .wpmb_dashboard .type .nofollow
+    {
+        float:left;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .wpmb_dashboard .type .nofollow{
+        background: #d1da5a;
+    }
+    .wpmb_dashboard .actions label{
+        position: relative;
+        display: inline-block;
+    }
+    .wpmb_dashboard .actions select.actionsSelect{
+        display: inline-block;
+        border: 2px solid #1b607f;
+        padding: 4px 3px 3px 5px;
+        margin: 0;
+        line-height: 100%;
+        font-size: 100%;
+        outline:none; /* remove focus ring from Webkit */
+        background: #f8f8f8;
+        -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+    /* for Webkit's CSS-only solution */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        .wpmb_dashboard .actions select.actionsSelect{
+            padding-right:30px;
+        }
+    }
+    /* Since we removed the default focus styles, we have to add our own */
+    .wpmb_dashboard .actions select.actionsSelect:focus {
+        -webkit-box-shadow: 0 0 3px 1px #c00;
+        -moz-box-shadow: 0 0 3px 1px #c00;
+        box-shadow: 0 0 3px 1px #c00;
+    }
+    .wpmb_dashboard .actions label:after{
+        content: "\25Bc";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        line-height: 180%;
+        font-size: 100%;
+        padding: 0 7px;
+        background-color: #278ab7;
+        background-image: linear-gradient(to bottom,#2e9fd2,#21759b);
+        border: 2px solid #1b607f;
+        border-left: 0px solid #1b607f;
+        -webkit-box-shadow: inset 0 1px 0 rgba(120,200,230,0.6);
+        box-shadow: inset 0 1px 0 rgba(120,200,230,0.6);
+        color: white;
+        pointer-events:none;
+        -webkit-border-radius: 0 6px 6px 0;
+        -moz-border-radius: 0 6px 6px 0;
+        border-radius: 0 6px 6px 0;
+    }
+/* -----/Dashboard style--------*/
+
+/* -----Setting style--------*/
+    .wpmb_settings .postbox .tablenav-pages.bottom{
+        margin-left: 8px;
+    }
+    .wpmb_settings .postbox .tr_ignore_roles_referer .td_ignore_roles_referer label{
+        margin-right:20px;
+    }
+    .wpmb_settings .postbox-container .postbox .inside .description{
+        word-wrap: break-word;
+    }
+	#poststuff h2 {
+		font-size: 2em;
+	}
+	p.wpmbdesc.label {
+		padding: 2px 0 10px 10px;
+		margin-bottom: 0px;
+		margin-left: -10px;
+	}
+	/*td.row-title{
+		width: 180px;
+	}*/	
+	p.wpmbdesc {
+		padding: 0 0 9px 23px;
+		margin: 7px 0 11px 0;
+	}
+    .wpmbdesc{
+        word-wrap: break-word;
+    }
+    /*Trigger styles*/
+    .advanced-settings-trigger{
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .column-url-from, .column-url-to{
+    	width:15%;    
+    }
+    .column-id,{
+    	width:5%;
+    }
+    .column-type, .column-found{
+    	width:10%;
+    }
+    .column-anchor-text, .column-remove, .column-domain, .column-time{
+    	width:15%;
+    }
+    .mbl-title{
+    	font-size:1em;
+    	font-weight:bold;
+    	margin-bottom:5px;
+    }
+    .mbl-logo{
+    	float:left;
+    	margin-right:15px;    
+    }
+	.button-block{
+		padding: 8px 0 0 8px;
+	}
+
+    .form-block{
+    	float:right;
+    }
+	div.pagination-links{
+		float:left;
+		line-height:2.5em;
+	}    
+@media only screen and (max-width: 500px) {
+	    .form-block{
+	    	float:none;
+	    	margin-top:25px;
+	    	margin-bottom:0px;
+			clear:both;
+	    }
+	    .form-block table{
+	    	margin: 0 auto;
+	    }
+	    .tablenav-pages{
+	    	margin: 0 0 0px;
+	    }
+	    div.pagination-links{
+			float:none;
+			line-height:2.5em;
+		} 
+	}	
+/* -----/Setting style--------*/

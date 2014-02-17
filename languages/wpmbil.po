@@ -1,0 +1,597 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Incoming Links\n"
+"POT-Creation-Date: 2014-01-11 15:37+0200\n"
+"PO-Revision-Date: 2014-01-11 15:38+0200\n"
+"Last-Translator: \n"
+"Language-Team: Monitor Backlinks\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ../.\n"
+
+#: .././config.php:71
+msgid "Every 60 Seconds"
+msgstr ""
+
+#: .././config.php:75
+msgid "Every 5 minutes"
+msgstr ""
+
+#: .././config.php:79
+msgid "Twice per Hour"
+msgstr ""
+
+#: .././config.php:83 .././admin/settings_page.php:151
+msgid "Weekly"
+msgstr ""
+
+#: .././config.php:87
+msgid "Monthly"
+msgstr ""
+
+#: .././admin/block_domains_ips.php:23 .././admin/block_domains_ips.php:26
+msgid "IP address invalid."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:43 .././admin/block_domains_ips.php:46
+msgid "IP address successful blocked."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:50 .././admin/block_domains_ips.php:53
+msgid "Error, can not add IP to block."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:58 .././admin/block_domains_ips.php:61
+msgid "IP address already blocked."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:98 .././admin/block_domains_ips.php:101
+msgid "IP address successful removed from block list."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:105 .././admin/block_domains_ips.php:108
+msgid "Error, can not remove IP address from block list."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:113 .././admin/block_domains_ips.php:116
+#: .././admin/block_domains_ips.php:232 .././admin/block_domains_ips.php:235
+#: .././admin/block_domains_ips.php:354 .././admin/block_domains_ips.php:357
+#: .././admin/dashboard.php:49 .././admin/dashboard.php:52
+#: .././admin/dashboard.php:65 .././admin/dashboard.php:68
+#: .././admin/dashboard.php:96 .././admin/dashboard.php:99
+#: .././admin/dashboard.php:112 .././admin/dashboard.php:115
+#: .././admin/dashboard.php:147 .././admin/dashboard.php:150
+msgid "Error, incorrect data."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:141 .././admin/block_domains_ips.php:144
+msgid "Domain address invalid."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:161 .././admin/block_domains_ips.php:164
+msgid "Domain address successful blocked."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:168 .././admin/block_domains_ips.php:171
+msgid "Error, can not add Domain to block."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:176 .././admin/block_domains_ips.php:179
+msgid "Domain address already blocked."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:217 .././admin/block_domains_ips.php:220
+msgid "Domain address successful removed from block list."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:224 .././admin/block_domains_ips.php:227
+msgid "Error, can not remove Domain address from block list."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:284 .././admin/block_domains_ips.php:287
+msgid "Link address invalid."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:308 .././admin/block_domains_ips.php:311
+msgid "Link(referrer) successful blocked."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:315 .././admin/block_domains_ips.php:318
+msgid "Error, can not add Link to block."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:323 .././admin/block_domains_ips.php:326
+msgid "Link already blocked."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:339 .././admin/block_domains_ips.php:342
+msgid "Link(referrer) successful removed from block list."
+msgstr ""
+
+#: .././admin/block_domains_ips.php:346 .././admin/block_domains_ips.php:349
+msgid "Error, can not remove Link(referrer) from block list."
+msgstr ""
+
+#: .././admin/dashboard.php:42 .././admin/dashboard.php:45
+msgid "Backlink successful unhighlighted."
+msgstr ""
+
+#: .././admin/dashboard.php:57 .././admin/dashboard.php:60
+msgid "Item already unhighlighted."
+msgstr ""
+
+#: .././admin/dashboard.php:89 .././admin/dashboard.php:92
+msgid "Backlink successful highlighted."
+msgstr ""
+
+#: .././admin/dashboard.php:104 .././admin/dashboard.php:107
+msgid "Item already highlighted."
+msgstr ""
+
+#: .././admin/dashboard.php:132 .././admin/dashboard.php:135
+msgid "Backlink successful removed from list."
+msgstr ""
+
+#: .././admin/dashboard.php:139 .././admin/dashboard.php:142
+msgid "Error, can not remove Backlink from list."
+msgstr ""
+
+#: .././admin/dashboard.php:274
+msgid "Valid Backlinks ( "
+msgstr ""
+
+#: .././admin/dashboard.php:274 .././admin/dashboard.php:396
+msgid " items )"
+msgstr ""
+
+#: .././admin/dashboard.php:295 .././admin/dashboard.php:307
+#: .././admin/dashboard_widgets.php:76 .././admin/dashboard_widgets.php:98
+#: .././front/email.php:131 .././front/email.php:233
+msgid "Domain"
+msgstr ""
+
+#: .././admin/dashboard.php:296 .././admin/dashboard.php:308
+#: .././front/email.php:145
+msgid "Type"
+msgstr ""
+
+#: .././admin/dashboard.php:297 .././admin/dashboard.php:309
+#: .././front/email.php:261
+msgid "Found On"
+msgstr ""
+
+#: .././admin/dashboard.php:298 .././admin/dashboard.php:310
+#: .././front/email.php:173 .././front/email.php:275
+msgid "Anchor Text"
+msgstr ""
+
+#: .././admin/dashboard.php:299 .././admin/dashboard.php:311
+#: .././front/email.php:187 .././front/email.php:289
+msgid "URL From"
+msgstr ""
+
+#: .././admin/dashboard.php:300 .././admin/dashboard.php:312
+#: .././front/email.php:201 .././front/email.php:303
+msgid "URL To"
+msgstr ""
+
+#: .././admin/dashboard.php:301 .././admin/dashboard.php:313
+msgid "Actions"
+msgstr ""
+
+#: .././admin/dashboard.php:352
+msgid "Select Action"
+msgstr ""
+
+#: .././admin/dashboard.php:353 .././admin/settings_page.php:632
+#: .././admin/settings_page.php:777 .././admin/settings_page.php:924
+msgid "Remove"
+msgstr ""
+
+#: .././admin/dashboard.php:354 .././admin/settings_page.php:758
+msgid "Block Domain"
+msgstr ""
+
+#: .././admin/dashboard.php:355
+msgid "Unhighlight"
+msgstr ""
+
+#: .././admin/dashboard.php:355
+msgid "Highlight"
+msgstr ""
+
+#: .././admin/dashboard.php:396
+msgid "Referrers pending for verification ( "
+msgstr ""
+
+#: .././admin/dashboard.php:456 .././admin/settings_page.php:1036
+msgid "scroll to top"
+msgstr ""
+
+#: .././admin/dashboard_widgets.php:22
+msgid "Recent Backlinks"
+msgstr ""
+
+#: .././admin/dashboard_widgets.php:28
+msgid "Backlinks Statistic"
+msgstr ""
+
+#: .././admin/dashboard_widgets.php:75 .././admin/dashboard_widgets.php:97
+msgid "Date"
+msgstr ""
+
+#: .././admin/dashboard_widgets.php:103
+msgid "View Links"
+msgstr ""
+
+#: .././admin/dashboard_widgets.php:123 .././admin/dashboard_widgets.php:132
+msgid "Months"
+msgstr ""
+
+#: .././admin/dashboard_widgets.php:123
+msgid "Count backlinks per month"
+msgstr ""
+
+#: .././admin/menu.php:10
+msgid "Incoming Links"
+msgstr ""
+
+#: .././admin/menu.php:12 .././admin/settings_page.php:37
+msgid "Settings"
+msgstr ""
+
+#: .././admin/settings_page.php:55 .././admin/settings_page.php:59
+msgid "All data successful removed."
+msgstr ""
+
+#: .././admin/settings_page.php:93 .././admin/settings_page.php:96
+msgid "Settings successful saved."
+msgstr ""
+
+#: .././admin/settings_page.php:114
+msgid "General"
+msgstr ""
+
+#: .././admin/settings_page.php:121
+msgid "Reset all stats:"
+msgstr ""
+
+#: .././admin/settings_page.php:124
+msgid "Reset all stats and settings"
+msgstr ""
+
+#: .././admin/settings_page.php:127
+msgid ""
+"If you want to restore the plugin to default settings and to remove all "
+"stats, use this button. This option will also clear all your lists, "
+"including: Valid Backlinks, Referrers, Blocked IPs, Blocked Domains and "
+"Blocked Referrers."
+msgstr ""
+
+#: .././admin/settings_page.php:139
+msgid "Email Settings"
+msgstr ""
+
+#: .././admin/settings_page.php:145
+msgid "Frequency:"
+msgstr ""
+
+#: .././admin/settings_page.php:149 .././admin/settings_page.php:409
+msgid "Never"
+msgstr ""
+
+#: .././admin/settings_page.php:150
+msgid "Daily"
+msgstr ""
+
+#: .././admin/settings_page.php:179
+msgid ":00am"
+msgstr ""
+
+#: .././admin/settings_page.php:180
+msgid ":30am"
+msgstr ""
+
+#: .././admin/settings_page.php:185
+msgid ":00pm"
+msgstr ""
+
+#: .././admin/settings_page.php:186
+msgid ":30pm"
+msgstr ""
+
+#: .././admin/settings_page.php:197
+msgid ""
+"Using this feature you will automatically receive latest backlinks, via "
+"email, daily or on\n"
+"                                                            the selected day "
+"of each week at the selected time. After receiving the email, you can\n"
+"                                                            share it with "
+"your friends, team or business partners."
+msgstr ""
+
+#: .././admin/settings_page.php:201 .././admin/settings_page.php:308
+#: .././admin/settings_page.php:512
+msgid "Save All Settings"
+msgstr ""
+
+#: .././admin/settings_page.php:209
+msgid "Pagination Settings"
+msgstr ""
+
+#: .././admin/settings_page.php:215
+msgid "Recent Backlinks:"
+msgstr ""
+
+#: .././admin/settings_page.php:222 .././admin/settings_page.php:243
+#: .././admin/settings_page.php:268 .././admin/settings_page.php:292
+msgid "per page"
+msgstr ""
+
+#: .././admin/settings_page.php:230
+msgid ""
+"Change the default value if you want to display more than 10 items on your "
+"Recent Backlinks widget."
+msgstr ""
+
+#: .././admin/settings_page.php:236
+msgid "Valid Backlinks:"
+msgstr ""
+
+#: .././admin/settings_page.php:253
+msgid ""
+"Change the default value if you want to display more than 10 items per page "
+"on the Valid Backlinks list."
+msgstr ""
+
+#: .././admin/settings_page.php:261
+msgid "Referrers list:"
+msgstr ""
+
+#: .././admin/settings_page.php:278
+msgid ""
+"Change the default value if you want to display more than 10 items per page "
+"on Referrers Pending for Verification list."
+msgstr ""
+
+#: .././admin/settings_page.php:285
+msgid "Other lists:"
+msgstr ""
+
+#: .././admin/settings_page.php:302
+msgid ""
+"Change the default value if you want to display more than 10 items per page "
+"on blocked  IPs list, blocked domains list and blocked referrers list."
+msgstr ""
+
+#: .././admin/settings_page.php:313
+msgid "Advanced Settings"
+msgstr ""
+
+#: .././admin/settings_page.php:313
+msgid "Show"
+msgstr ""
+
+#: .././admin/settings_page.php:313
+msgid "Hide"
+msgstr ""
+
+#: .././admin/settings_page.php:318
+msgid "Links/Domain:"
+msgstr ""
+
+#: .././admin/settings_page.php:346
+msgid ""
+"This is the number of links which will be crawled for each domain. If the "
+"maximum number is reached the rest of the links coming from that specific "
+"domain will be ignored."
+msgstr ""
+
+#: .././admin/settings_page.php:355
+msgid "Exclude by Role:"
+msgstr ""
+
+#: .././admin/settings_page.php:375
+msgid ""
+"Use this option if you need to ignore referrers for logged in users, with a "
+"specified role. You can select multiple checkboxes to exclude referrer "
+"checking for multiple roles."
+msgstr ""
+
+#: .././admin/settings_page.php:383
+msgid "Exclude Filter:"
+msgstr ""
+
+#: .././admin/settings_page.php:395
+msgid ""
+"Use this option if you need to eliminate certain referrers from your reports "
+"(referrers containing a specific string or matching a pattern). By default, "
+"the list is populated with most popular CMS backends."
+msgstr ""
+
+#: .././admin/settings_page.php:405
+msgid "Block domain, after:"
+msgstr ""
+
+#: .././admin/settings_page.php:413
+msgid "referrals not found."
+msgstr ""
+
+#: .././admin/settings_page.php:423
+msgid ""
+"Using this option you can block a domain if no referrers are found after a "
+"selected number of checks. Choose Never to disable this option."
+msgstr ""
+
+#: .././admin/settings_page.php:433
+msgid "Referrers per cron:"
+msgstr ""
+
+#: .././admin/settings_page.php:450
+msgid ""
+"This option indicates the number of links (referrers) to be checked on each "
+"cron. If your referrers list becomes too large you should increase this "
+"value."
+msgstr ""
+
+#: .././admin/settings_page.php:458
+msgid "Cron Type:"
+msgstr ""
+
+#: .././admin/settings_page.php:462
+msgid "Wordpress"
+msgstr ""
+
+#: .././admin/settings_page.php:463
+msgid "Use own cron"
+msgstr ""
+
+#: .././admin/settings_page.php:472
+msgid ""
+"Using this option you will need to define your own cron job using this link:"
+msgstr ""
+
+#: .././admin/settings_page.php:476
+msgid ""
+"WordPress Cron is triggered by site visits, being a \"pseudocron\" it may "
+"not run as expected on sites with little or no traffic."
+msgstr ""
+
+#: .././admin/settings_page.php:485
+msgid "Cron recurrence:"
+msgstr ""
+
+#: .././admin/settings_page.php:504
+msgid ""
+"This is how often the cron job will run. If your referrers list becomes too "
+"large you should set a lower value, allowing cron job to run more often."
+msgstr ""
+
+#: .././admin/settings_page.php:532 .././admin/settings_page.php:674
+#: .././admin/settings_page.php:821 .././admin/settings_page.php:965
+msgid "How does it work?"
+msgstr ""
+
+#: .././admin/settings_page.php:535 .././admin/settings_page.php:677
+#: .././admin/settings_page.php:824 .././admin/settings_page.php:968
+msgid "A Video tutorial and FAQs are available"
+msgstr ""
+
+#: .././admin/settings_page.php:535 .././admin/settings_page.php:546
+#: .././admin/settings_page.php:677 .././admin/settings_page.php:688
+#: .././admin/settings_page.php:824 .././admin/settings_page.php:835
+#: .././admin/settings_page.php:968 .././admin/settings_page.php:979
+msgid "here"
+msgstr ""
+
+#: .././admin/settings_page.php:543 .././admin/settings_page.php:685
+#: .././admin/settings_page.php:832 .././admin/settings_page.php:976
+msgid "Support & Reviews"
+msgstr ""
+
+#: .././admin/settings_page.php:545 .././admin/settings_page.php:687
+#: .././admin/settings_page.php:834
+msgid "Have a question?"
+msgstr ""
+
+#: .././admin/settings_page.php:546 .././admin/settings_page.php:688
+#: .././admin/settings_page.php:835 .././admin/settings_page.php:979
+msgid "You can ask for support"
+msgstr ""
+
+#: .././admin/settings_page.php:549 .././admin/settings_page.php:691
+#: .././admin/settings_page.php:838 .././admin/settings_page.php:982
+msgid "Your opinions and reviews are very important, write one"
+msgstr ""
+
+#: .././admin/settings_page.php:549 .././admin/settings_page.php:691
+#: .././admin/settings_page.php:838 .././admin/settings_page.php:982
+msgid "now"
+msgstr ""
+
+#: .././admin/settings_page.php:556 .././admin/settings_page.php:698
+#: .././admin/settings_page.php:845 .././admin/settings_page.php:989
+msgid "About us"
+msgstr ""
+
+#: .././admin/settings_page.php:559 .././admin/settings_page.php:701
+#: .././admin/settings_page.php:848 .././admin/settings_page.php:992
+msgid ""
+"Monitor Backlinks provides professional link monitoring services. A "
+"powerful, must have tool for SEOs and Web Marketers,"
+msgstr ""
+
+#: .././admin/settings_page.php:559 .././admin/settings_page.php:701
+#: .././admin/settings_page.php:848 .././admin/settings_page.php:992
+msgid "read more"
+msgstr ""
+
+#: .././admin/settings_page.php:592
+msgid "List of blocked IPs"
+msgstr ""
+
+#: .././admin/settings_page.php:613
+msgid "Block IP"
+msgstr ""
+
+#: .././admin/settings_page.php:736
+msgid "List of blocked Domains"
+msgstr ""
+
+#: .././admin/settings_page.php:882
+msgid "List of blocked Referrers"
+msgstr ""
+
+#: .././admin/settings_page.php:904
+msgid "Block URL"
+msgstr ""
+
+#: .././admin/settings_page.php:1019
+msgid "General Settings"
+msgstr ""
+
+#: .././admin/settings_page.php:1020
+msgid "Blocked IPs"
+msgstr ""
+
+#: .././admin/settings_page.php:1021
+msgid "Blocked Domains"
+msgstr ""
+
+#: .././admin/settings_page.php:1022
+msgid "Blocked Referrers"
+msgstr ""
+
+#: .././front/email.php:87
+msgid "Hello Admin!"
+msgstr ""
+
+#: .././front/email.php:88
+msgid "Your list of new referrers links"
+msgstr ""
+
+#: .././front/email.php:159
+msgid "Found on"
+msgstr ""
+
+#: .././front/email.php:371
+msgid "More details"
+msgstr ""
+
+#: .././front/email.php:372
+msgid "New referrer links from"
+msgstr ""
+
+#~ msgid ""
+#~ " (watch this <a href='http://deconf.com/projects/google-analytics-"
+#~ "dashboard-for-wordpress/' target='_blank'>Step by step video tutorial</a>)"
+#~ msgstr ""
+#~ " (watch this <a href='http://deconf.com/projects/google-analytics-"
+#~ "dashboard-for-wordpress/' target='_blank'>Step by step video tutorial</a>)"
