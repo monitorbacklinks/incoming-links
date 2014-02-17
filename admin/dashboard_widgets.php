@@ -17,11 +17,11 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
             /*
              * add widget latest links
              */
-        	
-        	if (!current_user_can('manage_options')){ 
-        		return; 
+
+        	if (!current_user_can('manage_options')){
+        		return;
         	}
-        	
+
             wp_add_dashboard_widget(
                 'wpmb-latest-links',         // Widget slug.
                 __('Recent Backlinks','wpmbil'),         // Title.
@@ -134,8 +134,8 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
 
                             foreach($stat_data as $item){
                             	$complete_data[date("Y-m",strtotime($item->time))] = $item->count;
-                            }                            
-                            
+                            }
+
                             foreach($complete_data as $item => $value){
 	                           	echo "['".$item."',".$value."],";
                             }

@@ -329,7 +329,7 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                                     </td>
                                                     <td class="type">
                                                         <div class="<?=($row->follow?'':'no')?>follow">
-                                                            <div><?=($row->follow?'FOLLOW':'NOFOLLOW')?></div>
+                                                            <?=($row->follow?'':'nofollow')?>
                                                         </div>
                                                     </td>
                                                     <td class="found">
@@ -339,7 +339,8 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                                         <?=$row->anchor_text?$row->anchor_text:'N/A'?>
                                                     </td>
                                                     <td class="url-from">
-                                                        <a href="<?=$row->referrer?>" target="_blank" title="<?=$row->referrer?>"><?=$WPMB_Dashboard->url_display($row->referrer,40)?></a>
+                                                        <?php $parse = parse_url($row->referrer); ?>
+                                                        <a href="<?=$row->referrer?>" target="_blank" title="<?=$row->referrer?>"><?=$WPMB_Dashboard->url_display($parse['path'].(isset($parse['query'])?$parse['query']:''),40)?></a>
                                                     </td>
                                                     <td class="url-to">
                                                         <?php $parse = parse_url($row->site_url); ?>
@@ -367,6 +368,14 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
 
                                             </tbody>
                                         </table>
+                                        <br>
+                                        <div class="align-center">
+                                          <em>
+                                            <strong>Tip: </strong>
+                                            The maximum number of links from the same domain is <strong>X</strong>.
+                                            You can change it in the <a href="admin.php?page=wpbm-settings">settings page</a>.
+                                          </em>
+                                        </div>
                                         <br>
                                         <div class="tablenav-pages">
                                             <span class="pagination-links">
@@ -418,7 +427,7 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                                 <tr valign="top">
                                                     <td class="column-time">
                                                         <?=$referrer->time?>
-                                                    </td>                                                
+                                                    </td>
                                                     <td class="column-referrer">
                                                         <a href="<?=$referrer->referrer;?>" target="_blank" title="<?=$referrer->referrer;?>"><?=$WPMB_Dashboard->url_display($referrer->referrer,120);?></a>
                                                     </td>

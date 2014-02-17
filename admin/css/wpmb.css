@@ -12,7 +12,7 @@
     }
 
     .wpmb_dashboard .type .nofollow{
-        background: #d1da5a;
+        background: #F0F04D;
     }
     .wpmb_dashboard .actions label{
         position: relative;
@@ -20,7 +20,7 @@
     }
     .wpmb_dashboard .actions select.actionsSelect{
         display: inline-block;
-        border: 2px solid #1b607f;
+        border: 1px solid #dddddd;
         padding: 4px 3px 3px 5px;
         margin: 0;
         line-height: 100%;
@@ -52,13 +52,12 @@
         bottom: 0;
         line-height: 180%;
         font-size: 100%;
-        padding: 0 7px;
-        background-color: #278ab7;
-        background-image: linear-gradient(to bottom,#2e9fd2,#21759b);
-        border: 2px solid #1b607f;
-        border-left: 0px solid #1b607f;
-        -webkit-box-shadow: inset 0 1px 0 rgba(120,200,230,0.6);
-        box-shadow: inset 0 1px 0 rgba(120,200,230,0.6);
+        padding: 2px 7px;
+        background-color: #555555;
+        background-image: linear-gradient(to bottom,#888888,#555555);
+        border: none;
+        -webkit-box-shadow: inset 0 1px 0 rgba(187,187,187,0.6);
+        box-shadow: inset 0 1px 0 rgba(187,187,187,0.6);
         color: white;
         pointer-events:none;
         -webkit-border-radius: 0 6px 6px 0;
@@ -87,7 +86,7 @@
 	}
 	/*td.row-title{
 		width: 180px;
-	}*/	
+	}*/
 	p.wpmbdesc {
 		padding: 0 0 9px 23px;
 		margin: 7px 0 11px 0;
@@ -101,7 +100,7 @@
         font-size: 14px;
     }
     .column-url-from, .column-url-to{
-    	width:15%;    
+    	width:15%;
     }
     .column-id,{
     	width:5%;
@@ -119,7 +118,7 @@
     }
     .mbl-logo{
     	float:left;
-    	margin-right:15px;    
+    	margin-right:15px;
     }
 	.button-block{
 		padding: 8px 0 0 8px;
@@ -131,7 +130,7 @@
 	div.pagination-links{
 		float:left;
 		line-height:2.5em;
-	}    
+	}
 @media only screen and (max-width: 500px) {
 	    .form-block{
 	    	float:none;
@@ -148,6 +147,6 @@
 	    div.pagination-links{
 			float:none;
 			line-height:2.5em;
-		} 
-	}	
+		}
+	}
 /* -----/Setting style--------*/
