@@ -31,21 +31,26 @@ class WPMB_Recent_Backlinks_Widget extends WP_Widget {
         echo $args['before_widget'];
         if ( ! empty( $title ) ) echo $args['before_title'] . $title . $args['after_title'];
 
-        $backlinks = $wpdb->get_results($wpdb->prepare("SELECT domain,referrer FROM ".$wpdb->prefix."backlinks  ORDER BY time DESC LIMIT %d",$instance[ 'count' ]));
+        $backlinks = $wpdb->get_results($wpdb->prepare("SELECT domain,referrer,DATE(time) as time FROM ".$wpdb->prefix."backlinks  ORDER BY time DESC LIMIT %d",$instance[ 'count' ]));
         if(count($backlinks)){
             ob_start();
             ?>
              <p></p>
+            <ul>
             <?php
             foreach($backlinks as $backlink){
                 ?>
-                <p>
+                <li>
+                    <div><small><em><?php echo $backlink->time?></em></small></div>
                     <a href="<?php echo $backlink->referrer; ?>" target="_blank" rel="nofollow"><?php echo $backlink->domain; ?></a>
-                </p>
+                </li>
                 <?php
             }
+            ?>
+            </ul>
+            <?php
 
-            if((int)$instance[ 'disable_credits' ] == 0) echo '<p><div style="text-align:right;width:100%;font-size:0.72em;">'.__('powered by','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/" rel="nofollow" style="text-decoration:none;font-size:1em;">Monitor Backlinks</a></div></p>';
+            if((int)$instance[ 'disable_credits' ] == 0) echo '<p><div style="text-align:right;width:100%;font-size:0.72em;">'.__('powered by','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/" rel="nofollow" style="text-decoration:none;font-size:1em;">Incoming Links</a></div></p>';
 
             $widget_content = ob_get_contents();
             ob_end_clean();
