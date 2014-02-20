@@ -43,7 +43,7 @@ A set of advanced options will allow a full customization of the plugin by: igno
 
 = Related Links =
 
-A short video tutorial is available here: [Incoming Links Tutorial](http://monitorbacklinks.com/blog/incoming-links/)
+A short tutorial is available here: [Incoming Links Tutorial](http://monitorbacklinks.com/blog/incoming-links/)
 
 == Installation ==
 
@@ -52,7 +52,7 @@ A short video tutorial is available here: [Incoming Links Tutorial](http://monit
 3. Configure the plugin by going to Incoming Links -> Settings in your administration menu
 4. You can check your reports and latest backlinks in your administration dashboard or by accessing the Incoming Links main board   
 
-A step by step video tutorial is available here: [Incoming Links Tutorial](http://monitorbacklinks.com/blog/incoming-links/)
+A full tutorial is available here: [Incoming Links Tutorial](http://monitorbacklinks.com/blog/incoming-links/)
 
 == Frequently Asked Questions == 
 
@@ -62,7 +62,7 @@ The plugin should work properly out of the box, but you can customize it to fit 
 
 = More Questions? =
 
-Have additional questions? FAQ and a video are available on [Monitor Backlinks Blog](http://monitorbacklinks.com/blog/incoming-links/) 
+Have additional questions? FAQ and features description are available on [Monitor Backlinks Blog](http://monitorbacklinks.com/blog/incoming-links/) 
 
 == Screenshots ==
 

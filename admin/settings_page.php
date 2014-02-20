@@ -601,7 +601,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                 <h3><span><?php _e('How does it work?','wpmbil'); ?></span></h3>
                                 <div class="inside">
                                     <div><a href="http://monitorbacklinks.com/blog/incoming-links/"><img src="<?php echo plugins_url( 'images/incoming-links.png' , __FILE__ ); ?>" /></a></div>
-                                    <span class="wpmbdesc"><?php echo  __('A video tutorial and FAQs are available','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/">'.__('here').'</a>.'; ?></span>
+                                    <span class="wpmbdesc"><?php echo  __('A full description and FAQs are available','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/">'.__('here').'</a>.'; ?></span>
                                     <br /><br />
                                     <span class="wpmbdesc"><?php echo  __('Use the','wpmbil').' <a href="widgets.php">'.__('Recent Backlinks Widget').'</a> '.__('to display the latest domains linking back to you!','wpmbil'); ?></span>
                                 </div> <!-- .inside -->
@@ -747,7 +747,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                 <h3><span><?php _e('How does it work?','wpmbil'); ?></span></h3>
                                 <div class="inside">
                                     <div><a href="http://monitorbacklinks.com/blog/incoming-links/"><img src="<?php echo plugins_url( 'images/incoming-links.png' , __FILE__ ); ?>" /></a></div>
-                                    <span class="wpmbdesc"><?php echo  __('A video tutorial and FAQs are available','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/">'.__('here').'</a>.'; ?></span>
+                                    <span class="wpmbdesc"><?php echo  __('A full description and FAQs are available','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/">'.__('here').'</a>.'; ?></span>
                                     <br /><br />
                                     <span class="wpmbdesc"><?php echo  __('Use the','wpmbil').' <a href="widgets.php">'.__('Recent Backlinks Widget').'</a> '.__('to display the latest domains linking back to you!','wpmbil'); ?></span>
                                 </div> <!-- .inside -->
@@ -898,7 +898,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                 <h3><span><?php _e('How does it work?','wpmbil'); ?></span></h3>
                                 <div class="inside">
                                     <div><a href="http://monitorbacklinks.com/blog/incoming-links/"><img src="<?php echo plugins_url( 'images/incoming-links.png' , __FILE__ ); ?>" /></a></div>
-                                    <span class="wpmbdesc"><?php echo  __('A video tutorial and FAQs are available','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/">'.__('here').'</a>.'; ?></span>
+                                    <span class="wpmbdesc"><?php echo  __('A full description and FAQs are available','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/">'.__('here').'</a>.'; ?></span>
                                     <br /><br />
                                     <span class="wpmbdesc"><?php echo  __('Use the','wpmbil').' <a href="widgets.php">'.__('Recent Backlinks Widget').'</a> '.__('to display the latest domains linking back to you!','wpmbil'); ?></span>
                                 </div> <!-- .inside -->
@@ -1046,7 +1046,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                 <h3><span><?php _e('How does it work?','wpmbil'); ?></span></h3>
                                 <div class="inside">
                                     <div><a href="http://monitorbacklinks.com/blog/incoming-links/"><img src="<?php echo plugins_url( 'images/incoming-links.png' , __FILE__ ); ?>" /></a></div>
-                                    <span class="wpmbdesc"><?php echo  __('A video tutorial and FAQs are available','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/">'.__('here').'</a>.'; ?></span>
+                                    <span class="wpmbdesc"><?php echo  __('A full description and FAQs are available','wpmbil').' <a href="http://monitorbacklinks.com/blog/incoming-links/">'.__('here').'</a>.'; ?></span>
                                     <br /><br />
                                     <span class="wpmbdesc"><?php echo  __('Use the','wpmbil').' <a href="widgets.php">'.__('Recent Backlinks Widget').'</a> '.__('to display the latest domains linking back to you!','wpmbil'); ?></span>
                                 </div> <!-- .inside -->
