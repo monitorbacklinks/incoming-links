@@ -1,5 +1,5 @@
 === Incoming Links ===
-Contributors: monitorbacklinks, deconf
+Contributors: MonitorBacklinks, deconf
 Tags: incoming, links, backlinks, monitor, incoming links, inbound links, referrers, inlinks, inward links, SEO
 Requires at least: 2.8
 Tested up to: 3.8
