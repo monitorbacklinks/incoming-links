@@ -41,8 +41,8 @@ class WPMB_Recent_Backlinks_Widget extends WP_Widget {
             foreach($backlinks as $backlink){
                 ?>
                 <li>
-                    <div><small><em><?php echo $backlink->time?></em></small></div>
-                    <a href="<?php echo $backlink->referrer; ?>" target="_blank" rel="nofollow"><?php echo $backlink->domain; ?></a>
+                    <div><small><em><?=htmlspecialchars($backlink->time, ENT_QUOTES)?></em></small></div>
+                    <a href="<?=htmlspecialchars($backlink->referrer, ENT_QUOTES)?>" target="_blank" rel="nofollow"><?=htmlspecialchars($backlink->domain, ENT_QUOTES)?></a>
                 </li>
                 <?php
             }
