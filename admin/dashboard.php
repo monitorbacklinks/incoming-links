@@ -322,7 +322,7 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                                         ><?=$index;?>
                                                     </td>
                                                     <td class="domain">
-                                                        <a href="http://<?=$row->referrer;?>" target="_blank">
+                                                        <a href="<?=$row->referrer;?>" target="_blank">
                                                             <?=$row->domain;?>
                                                         </a>
                                                     </td>

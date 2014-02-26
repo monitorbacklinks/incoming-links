@@ -127,7 +127,8 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
             curl_setopt($ch, CURLOPT_HEADER, 0);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Set curl to return the data instead of printing it to the browser.
             curl_setopt($ch, CURLOPT_URL, $url);
-           // curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
+            curl_setopt($ch, CURLOPT_MAXREDIRS, 0);
             curl_setopt($ch, CURLOPT_USERAGENT,"MonitorBacklinksWP (+http://monitorbacklinks.com/blog/incoming-links/)");
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
             curl_setopt($ch, CURLOPT_TIMEOUT, 15);
