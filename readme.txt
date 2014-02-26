@@ -3,7 +3,7 @@ Contributors: MonitorBacklinks, deconf
 Tags: incoming, links, backlinks, monitor, incoming links, inbound links, referrers, inlinks, inward links, SEO
 Requires at least: 2.8
 Tested up to: 3.8
-Stable tag: 0.9.1b
+Stable tag: 0.9.2b
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,6 +76,11 @@ Have additional questions? FAQ and features description are available on [Monito
 This plugin it's released under the GPLv2, you can use it free of charge on your personal or commercial website.
 
 == Changelog ==
+
+= 26.02.2014 - v0.9.2b =
+
+- disabled cURL follow redirects
+- fixed URL in Incoming Links dashboard
 
 = 22.02.2014 - v0.9.1b =
 
