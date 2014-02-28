@@ -253,12 +253,12 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                             }
                             foreach($months as $number=>$month){
                                 ?>
-                                <option <?php selected( $current, $number); ?> value="<?=$number?>"><?=$month?></option>
+                                <option <?php selected( $current, $number); ?> value="<?php echo $number;?>"><?php echo $month;?></option>
                                 <?php
                             }
                             ?>
                         </select>
-                        <input type="hidden" name="page" value="<?=$_GET['page']?>">
+                        <input type="hidden" name="page" value="<?php echo $_GET['page'];?>">
                         <input type="submit" name="" id="post-query-submit" class="button" value="Filter">
                         <br class="clear"><br>
                     </div>
@@ -317,33 +317,33 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                             foreach($rows as $row){
 												$index--;
 												?>
-                                                <tr class="format-standard hentry row-<?=$row->id;?><?=($row->highlight?' highlight':'')?>">
+                                                <tr class="format-standard hentry row-<?php echo $row->id;?><?php echo ($row->highlight?' highlight':'');?>">
                                                     <td class="id"
-                                                        ><?=$index;?>
+                                                        ><?php echo $index;?>
                                                     </td>
                                                     <td class="domain">
-                                                        <a href="<?=$row->referrer;?>" target="_blank">
-                                                            <?=$row->domain;?>
+                                                        <a href="<?php echo $row->referrer;?>" target="_blank">
+                                                            <?php echo $row->domain;?>
                                                         </a>
                                                     </td>
                                                     <td class="type">
-                                                        <div class="<?=($row->follow?'':'no')?>follow">
-                                                            <?=($row->follow?'':'nofollow')?>
+                                                        <div class="<?php echo ($row->follow?'':'no');?>follow">
+                                                            <?php echo ($row->follow?'':'nofollow');?>
                                                         </div>
                                                     </td>
                                                     <td class="found">
-                                                        <?=date('Y-m-d',strtotime($row->time))?>
+                                                        <?php echo date('Y-m-d',strtotime($row->time));?>
                                                     </td>
                                                     <td class="anchor-text">
-                                                        <?=$row->anchor_text?$row->anchor_text:'N/A'?>
+                                                        <?php echo $row->anchor_text?$row->anchor_text:'N/A';?>
                                                     </td>
                                                     <td class="url-from">
                                                         <?php $parse = parse_url($row->referrer); ?>
-                                                        <a href="<?=$row->referrer?>" target="_blank" title="<?=$row->referrer?>"><?=$WPMB_Dashboard->url_display($parse['path'].(isset($parse['query'])?$parse['query']:''),40)?></a>
+                                                        <a href="<?php echo $row->referrer;?>" target="_blank" title="<?php echo $row->referrer;?>"><?php echo $WPMB_Dashboard->url_display($parse['path'].(isset($parse['query'])?$parse['query']:''),40);?></a>
                                                     </td>
                                                     <td class="url-to">
                                                         <?php $parse = parse_url($row->site_url); ?>
-                                                        <a href="<?=$row->site_url?>" target="_blank" title="<?=$parse['path'].(isset($parse['query'])?$parse['query']:'')?>"><?=$WPMB_Dashboard->url_display($parse['path'].(isset($parse['query'])?$parse['query']:''),40)?></a>
+                                                        <a href="<?php echo $row->site_url;?>" target="_blank" title="<?php echo $parse['path'].(isset($parse['query'])?$parse['query']:'');?>"><?php echo $WPMB_Dashboard->url_display($parse['path'].(isset($parse['query'])?$parse['query']:''),40);?></a>
                                                     </td>
                                                     <td class="actions">
                                                         <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="POST">
@@ -352,12 +352,12 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                                                     <option value="" selected="selected"><?php _e('Select Action','wpmbil'); ?></option>
                                                                     <option value="delete_backlink"><?php _e('Remove','wpmbil'); ?></option>
                                                                     <option value="add_block_domain"><?php _e('Block Domain','wpmbil'); ?></option>
-                                                                    <option value="<?=($row->highlight?'unhighlight':'highlight')?>_backlink"><?=($row->highlight?__('Unhighlight','wpmbil'):__('Highlight','wpmbil'))?></option>
+                                                                    <option value="<?php echo ($row->highlight?'unhighlight':'highlight');?>_backlink"><?php echo ($row->highlight?__('Unhighlight','wpmbil'):__('Highlight','wpmbil'));?></option>
                                                                 </select>
                                                             </label>
-                                                            <input type="hidden" name="domain" value="<?=$row->domain;?>">
+                                                            <input type="hidden" name="domain" value="<?php echo $row->domain;?>">
                                                             <input type="hidden" name="ajax" value="true">
-                                                            <input type="hidden" name="id" value="<?=$row->id?>">
+                                                            <input type="hidden" name="id" value="<?php echo $row->id;?>">
                                                         </form>
                                                     </td>
                                                 </tr>
@@ -426,10 +426,10 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                                             <table class="widefat">
                                                 <tr valign="top">
                                                     <td class="column-time">
-                                                        <?=$referrer->time?>
+                                                        <?php echo $referrer->time;?>
                                                     </td>
                                                     <td class="column-referrer">
-                                                        <a href="<?=$referrer->referrer;?>" target="_blank" title="<?=$referrer->referrer;?>"><?=$WPMB_Dashboard->url_display($referrer->referrer,120);?></a>
+                                                        <a href="<?php echo $referrer->referrer;?>" target="_blank" title="<?php echo $referrer->referrer;?>"><?php echo $WPMB_Dashboard->url_display($referrer->referrer,120);?></a>
                                                     </td>
                                                 </tr>
                                             </table>
