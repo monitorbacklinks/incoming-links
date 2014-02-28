@@ -70,27 +70,30 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
                 	$size = strlen($body);
                 	
 					if ((($size*8)/(1024*1024)<2) AND $body){ //Not bigger than 2MB and not empty
-                	
-	                	$document = phpQuery::newDocumentHTML($body);//parse content
+                		try{ 
+	                		$document = phpQuery::newDocumentHTML($body);//parse content
 	                		
-	                    $follow = 0;
-	                    $find = false;
-	                    foreach($document->find('a') as $tag){ //go by each link
-	                        $href_data = @parse_url(pq($tag)->attr('href'));
-	                        if(strpos($href_data['host'],$site_host)!==FALSE){ //find the same host
-	                            $find = true;
-	                            $anchor_text = pq($tag)->text();
-	                            $rel = pq($tag)->attr('rel');
-	                            if($rel && strpos($rel,'nofollow')!==FALSE){
-	                                $follow = 0;
-	                            }else{
-	                                $follow = 1;
-	                            }
-	                            $this->move_to_main_table($referrer,$follow,$anchor_text);
-	                            break;
-	                        }
-	                    }
-                    	phpQuery::unloadDocuments(); //prevent memory leaking
+		                    $follow = 0;
+		                    $find = false;
+		                    foreach($document->find('a') as $tag){ //go by each link
+		                        $href_data = @parse_url(pq($tag)->attr('href'));
+		                        if(strpos($href_data['host'],$site_host)!==FALSE){ //find the same host
+		                            $find = true;
+		                            $anchor_text = pq($tag)->text();
+		                            $rel = pq($tag)->attr('rel');
+		                            if($rel && strpos($rel,'nofollow')!==FALSE){
+		                                $follow = 0;
+		                            }else{
+		                                $follow = 1;
+		                            }
+		                            $this->move_to_main_table($referrer,$follow,$anchor_text);
+		                            break;
+		                        }
+		                    }
+	                    	phpQuery::unloadDocuments(); //prevent memory leaking
+                    	} catch (Exception $e){
+                    		$find = false;
+                    	}    	
                 	} else{
                 		$find = false;
                 	}
