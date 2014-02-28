@@ -67,10 +67,9 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
                 	);
                 	$body = wp_remote_retrieve_body(wp_remote_get( $referrer->referrer, $args )); // Get page
                 	
-                	$serialized_data = serialize($body); 
-                	$size = strlen($serialized_data);
+                	$size = strlen($body);
                 	
-                	if (($size*8)/(1024*1024)<2){ //Not bigger than 2MB
+					if ((($size*8)/(1024*1024)<2) AND $body){ //Not bigger than 2MB and not empty
                 	
 	                	$document = phpQuery::newDocumentHTML($body);//parse content
 	                		

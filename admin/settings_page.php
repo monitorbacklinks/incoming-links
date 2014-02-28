@@ -507,7 +507,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                                             <?php
                                                             for($i=1; $i<10; $i++){
                                                                 ?>
-                                                                <option value="<?php echo $i;?>" <?php selected( $settings->cron_parse_count, $i); ?>><?php echo $i;?></o<?php echo on>
+                                                                <option value="<?php echo $i;?>" <?php selected( $settings->cron_parse_count, $i); ?>><?php echo $i;?></option>
                                                             <?php
                                                             }
                                                             ?>
