@@ -480,7 +480,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                                             <?php
                                                             for($i=1; $i<20; $i++){
                                                                 ?>
-                                                                <option value="<?=$i?>" <?php selected( $settings->ban_domain, $i); ?>><?php echo $i.' '.__('referrals not found.','wpmbil'); ?></option>
+                                                                <option value="<?php echo $i;?>" <?php selected( $settings->ban_domain, $i); ?>><?php echo $i.' '.__('referrals not found.','wpmbil'); ?></option>
                                                             <?php
                                                             }
                                                             ?>
@@ -507,7 +507,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                                             <?php
                                                             for($i=1; $i<10; $i++){
                                                                 ?>
-                                                                <option value="<?=$i?>" <?php selected( $settings->cron_parse_count, $i); ?>><?=$i?></option>
+                                                                <option value="<?php echo $i;?>" <?php selected( $settings->cron_parse_count, $i); ?>><?php echo $i;?></o<?php echo on>
                                                             <?php
                                                             }
                                                             ?>
@@ -560,7 +560,7 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                                             unset($schedules['weekly']);unset($schedules['monthly']);
                                                             foreach($schedules as $key=>$schedule):
                                                                 ?>
-                                                                <option value="<?=$key?>" <?php selected( $settings->cron_recurrence, $key); ?>><?=$schedule['display']?></option>
+                                                                <option value="<?php echo $key;?>" <?php selected( $settings->cron_recurrence, $key); ?>><?php echo $schedule['display'];?></option>
                                                                 <?php
                                                             endforeach;
                                                             ?>
@@ -695,18 +695,18 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <?php
                                     foreach($WPMB_Settings->getBlockedIps($WPMB_Settings->settings->items_per_page_blocked) as $ip){
                                         ?>
-                                        <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>" data-per-page="<?=$WPMB_Settings->settings->items_per_page_blocked;?>">
+                                        <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>" data-per-page="<?php echo $WPMB_Settings->settings->items_per_page_blocked;?>">
                                             <table class="widefat">
                                                 <tr valign="top">
                                                     <td class="row-title">
-                                                        <label><?=$ip->ip; ?></label>
+                                                        <label><?php echo $ip->ip; ?></label>
                                                     </td>
                                                     <td align="right">
                                                         <input class="button-primary" type="submit" name="submit" value="<?php _e( 'Remove','wpmbil' ); ?>" />
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <input type="hidden" name="id" value="<?=$ip->id; ?>">
+                                            <input type="hidden" name="id" value="<?php echo $ip->id; ?>">
                                             <input type="hidden" name="action" value="delete_block_ip">
                                             <input type="hidden" name="ajax" value="true">
                                         </form>
@@ -844,18 +844,18 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <?php
                                     foreach($WPMB_Settings->getBlockedDomains($WPMB_Settings->settings->items_per_page_blocked) as $domain){
                                         ?>
-                                        <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>" data-per-page="<?=$WPMB_Settings->settings->items_per_page_blocked;?>">
+                                        <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>" data-per-page="<?php echo $WPMB_Settings->settings->items_per_page_blocked;?>">
                                             <table class="widefat">
                                                 <tr valign="top">
                                                     <td class="row-title">
-                                                        <label><a href="<?=$domain->domain; ?>" target="_blank"><?=$domain->domain; ?></a></label>
+                                                        <label><a href="<?php echo $domain->domain; ?>" target="_blank"><?php echo $domain->domain; ?></a></label>
                                                     </td>
                                                     <td align="right">
                                                         <input class="button-primary" type="submit" name="submit" value="<?php _e( 'Remove','wpmbil' ); ?>" />
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <input type="hidden" name="id" value="<?=$domain->id; ?>">
+                                            <input type="hidden" name="id" value="<?php echo $domain->id; ?>">
                                             <input type="hidden" name="action" value="delete_block_domain">
                                             <input type="hidden" name="ajax" value="true">
                                         </form>
@@ -995,18 +995,18 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                                     <?php
                                     foreach($WPMB_Settings->getBlockedReferrers($WPMB_Settings->settings->items_per_page_blocked) as $referrer){
                                         ?>
-                                        <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>" data-per-page="<?=$WPMB_Settings->settings->items_per_page_blocked;?>">
+                                        <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>" data-per-page="<?php echo $WPMB_Settings->settings->items_per_page_blocked;?>">
                                             <table class="widefat">
                                                 <tr valign="top">
                                                     <td class="row-title">
-                                                        <label><a href="<?=$referrer->referrer; ?>" target="_blank"><?=$WPMB_Settings->url_display($referrer->referrer,85); ?></a></label>
+                                                        <label><a href="<?php echo $referrer->referrer; ?>" target="_blank"><?php echo $WPMB_Settings->url_display($referrer->referrer,85); ?></a></label>
                                                     </td>
                                                     <td align="right">
                                                         <input class="button-primary" type="submit" name="submit" value="<?php _e( 'Remove','wpmbil' ); ?>" />
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <input type="hidden" name="id" value="<?=$referrer->id; ?>">
+                                            <input type="hidden" name="id" value="<?php echo $referrer->id; ?>">
                                             <input type="hidden" name="action" value="delete_block_referrer">
                                             <input type="hidden" name="ajax" value="true">
                                         </form>
@@ -1102,21 +1102,21 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
             <div class="wrap wpmb_settings">
                 <div id="icon-options-general" class="icon32"><br></div>
                 <h2 class="nav-tab-wrapper">
-                    <a href="#general-options" class="nav-tab <?=($active_page=='general-options'?'nav-tab-active':'')?>"><?php _e('General Settings','wpmbil'); ?></a>
-                    <a href="#block-ip" class="nav-tab <?=($active_page=='block-ip'?'nav-tab-active':'')?>"><?php _e('Blocked IPs','wpmbil'); ?></a>
-                    <a href="#block-domain" class="nav-tab <?=($active_page=='block-domain'?'nav-tab-active':'')?>"><?php _e('Blocked Domains','wpmbil'); ?></a>
-                    <a href="#block-referrer" class="nav-tab <?=($active_page=='block-referrer'?'nav-tab-active':'')?>"><?php _e('Blocked Referrers','wpmbil'); ?></a>
+                    <a href="#general-options" class="nav-tab <?php echo ($active_page=='general-options'?'nav-tab-active':'')?>"><?php _e('General Settings','wpmbil'); ?></a>
+                    <a href="#block-ip" class="nav-tab <?php echo ($active_page=='block-ip'?'nav-tab-active':'');?>"><?php _e('Blocked IPs','wpmbil'); ?></a>
+                    <a href="#block-domain" class="nav-tab <?php echo ($active_page=='block-domain'?'nav-tab-active':'');?>"><?php _e('Blocked Domains','wpmbil'); ?></a>
+                    <a href="#block-referrer" class="nav-tab <?php echo ($active_page=='block-referrer'?'nav-tab-active':'');?>"><?php _e('Blocked Referrers','wpmbil'); ?></a>
                 </h2>
-                <div id="general-options" class="nav-tab-panel" style="display: <?=($active_page=='general-options'?'block':'none')?>">
+                <div id="general-options" class="nav-tab-panel" style="display: <?php echo ($active_page=='general-options'?'block':'none');?>">
                     <?php $WPMB_Settings->display_general_options_page(); ?>
                 </div>
-                <div id="block-ip" class="nav-tab-panel" style="display: <?=($active_page=='block-ip'?'block':'none')?>">
+                <div id="block-ip" class="nav-tab-panel" style="display: <?php echo ($active_page=='block-ip'?'block':'none');?>">
                     <?php $WPMB_Settings->display_block_ip_page(); ?>
                 </div>
-                <div id="block-domain" class="nav-tab-panel" style="display: <?=($active_page=='block-domain'?'block':'none')?>">
+                <div id="block-domain" class="nav-tab-panel" style="display: <?php echo ($active_page=='block-domain'?'block':'none');?>">
                     <?php $WPMB_Settings->display_block_domain_page(); ?>
                 </div>
-                <div id="block-referrer" class="nav-tab-panel" style="display: <?=($active_page=='block-referrer'?'block':'none')?>">
+                <div id="block-referrer" class="nav-tab-panel" style="display: <?php echo ($active_page=='block-referrer'?'block':'none');?>">
                     <?php $WPMB_Settings->display_block_referrer_page(); ?>
                 </div>
                 <p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', 'wpmbil' ); ?></a><br class="clear" /></p>
