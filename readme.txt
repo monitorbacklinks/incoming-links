@@ -3,7 +3,7 @@ Contributors: MonitorBacklinks, deconf
 Tags: incoming, links, backlinks, monitor, incoming links, inbound links, referrers, inlinks, inward links, SEO
 Requires at least: 2.8
 Tested up to: 3.8
-Stable tag: 0.9.2b
+Stable tag: 0.9.3b
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,6 +76,14 @@ Have additional questions? FAQ and features description are available on [Monito
 This plugin it's released under the GPLv2, you can use it free of charge on your personal or commercial website.
 
 == Changelog ==
+
+= 28.02.2014 - v0.9.3b =
+
+- replaced curl with wp_remote_get
+- prevent phpQuery memory leaks
+- no further parsing on pages greater than 2 Mb
+- referres from pages greater than 2 Mb are added to block list
+- removed php short tags to increase code portabilit
 
 = 26.02.2014 - v0.9.2b =
 
