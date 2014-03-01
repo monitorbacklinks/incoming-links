@@ -2,7 +2,7 @@
 Contributors: MonitorBacklinks, deconf
 Tags: incoming, links, backlinks, monitor, incoming links, inbound links, referrers, inlinks, inward links, SEO
 Requires at least: 2.8
-Tested up to: 3.8
+Tested up to: 3.8.1
 Stable tag: 0.9.3b
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
