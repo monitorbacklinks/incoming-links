@@ -77,13 +77,13 @@ This plugin it's released under the GPLv2, you can use it free of charge on your
 
 == Changelog ==
 
-= 28.02.2014 - v0.9.3b =
+= 29.02.2014 - v0.9.3b =
 
 - replaced curl with wp_remote_get
 - prevent phpQuery memory leaks
 - no further parsing on pages greater than 2 Mb
-- referres from pages greater than 2 Mb are added to block list
-- removed php short tags to increase code portabilit
+- referrers from pages greater than 2 Mb are added to block list
+- removed php short tags to increase code portability
 
 = 26.02.2014 - v0.9.2b =
 
