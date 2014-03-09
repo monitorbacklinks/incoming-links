@@ -86,7 +86,7 @@ Class WPMB_Install{
             										'/[&|\?](q|s|search)=(.*?)/',														//popular search queries for google, bing, sweetim and google cse
             										'/https?:\/\/.*(search\.|suche\.|mail\.|webmail\.|yandex\.ru|baidu\.com|translate\.).*\//',	//yandex, yahoo, baidu, google translate
             							            '/\/(search|s|yandsearch|l\.php|imgres|url)\?/',									//bing, yahoo, yandex, facebook like, google images
-            							            '^crawler.php^'																		//other crawlers
+            							            '^crawler.php^', '^doubleclick.net^'												//other crawlers
         											),
             'secret_key'=> wp_hash( get_current_user_id( ) . get_bloginfo('name')  . uniqid("",true) ),
             'limit_links_domain' => 5,
