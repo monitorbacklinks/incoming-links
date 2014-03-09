@@ -65,7 +65,12 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
                 			'httpversion' => '1.0',
                 			'user-agent'  => 'MonitorBacklinksWP (+http://monitorbacklinks.com/blog/incoming-links/)'
                 	);
-                	$body = wp_remote_retrieve_body(wp_remote_get( $referrer->referrer, $args )); // Get page
+                	$result = wp_remote_get( $referrer->referrer, $args );
+                	if ( 200 == $result['response']['code'] ) {
+                		$body = $result['body'];
+                	} else{
+                		$body = '';
+                	}	 
                 	
                 	$size = strlen($body);
                 	
