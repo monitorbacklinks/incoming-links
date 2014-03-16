@@ -71,7 +71,7 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
          */
         function wpmb_latest_links() {
             global $wpdb;
-            $backlinks = $wpdb->get_results("SELECT time,domain FROM ".$wpdb->prefix."backlinks  ORDER BY time DESC LIMIT 10");
+            $backlinks = $wpdb->get_results("SELECT time,domain,referrer FROM ".$wpdb->prefix."backlinks  ORDER BY time DESC LIMIT 10");
             if(count($backlinks)){
                 ?>
                 <table class="widefat">
@@ -90,7 +90,7 @@ if(!class_exists('WPMB_Dashboard_Widgets') && class_exists('WPMB_Dashboard')){
                                     <?php echo date('Y-m-d H:i:s',strtotime($backlink->time)); ?>
                                 </td>
                                 <td>
-                                    <a href="http://<?php echo $backlink->domain; ?>" target="_blank"><?php echo $backlink->domain; ?></a>
+                                    <a href="<?php echo $backlink->referrer; ?>" target="_blank"><?php echo $backlink->domain; ?></a>
                                 </td>
                             </tr>
                             <?php

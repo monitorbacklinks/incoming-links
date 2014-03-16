@@ -147,8 +147,8 @@ if(!class_exists('WPMB_Referrers') && class_exists('WPMB_Config') ){
             $count = $wpdb->get_var($wpdb->prepare("
                 SELECT COUNT(*) as count
                 FROM " . $wpdb->prefix . "backlinks
-                WHERE referrer = %s
-            ",$referrer));
+                WHERE REPLACE(referrer,'www.','') = %s
+            ",str_replace('www.','',$referrer)));
             if($count){
                 return true;
             }else{
@@ -161,8 +161,8 @@ if(!class_exists('WPMB_Referrers') && class_exists('WPMB_Config') ){
             $count = $wpdb->get_var($wpdb->prepare("
                 SELECT COUNT(*)
                 FROM " . $wpdb->prefix . "backlinks_block_domain
-                WHERE referrer = %s
-            ",$referrer));
+                WHERE REPLACE(referrer,'www.','') = %s
+            ",str_replace('www.','',$referrer)));
             if($count){
                 return true;
             }else{
@@ -175,8 +175,8 @@ if(!class_exists('WPMB_Referrers') && class_exists('WPMB_Config') ){
             $count = $wpdb->get_var($wpdb->prepare("
                 SELECT COUNT(*)
                 FROM " . $wpdb->prefix . "backlinks_cron
-                WHERE referrer = %s
-            ",$referrer));
+                WHERE REPLACE(referrer,'www.','') = %s
+            ",str_replace('www.','',$referrer)));
             if($count){
                 return true;
             }else{

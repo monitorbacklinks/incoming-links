@@ -31,7 +31,7 @@ class WPMB_Recent_Backlinks_Widget extends WP_Widget {
         echo $args['before_widget'];
         if ( ! empty( $title ) ) echo $args['before_title'] . $title . $args['after_title'];
 
-        $backlinks = $wpdb->get_results($wpdb->prepare("SELECT domain,referrer,DATE(time) as time FROM ".$wpdb->prefix."backlinks  ORDER BY time DESC LIMIT %d",$instance[ 'count' ]));
+        $backlinks = $wpdb->get_results($wpdb->prepare("SELECT domain,referrer,time FROM (SELECT * FROM ".$wpdb->prefix."backlinks ORDER BY time DESC) AS sorted GROUP BY domain ORDER BY time DESC LIMIT %d",$instance[ 'count' ]));
         if(count($backlinks)){
             ob_start();
             ?>
@@ -41,8 +41,8 @@ class WPMB_Recent_Backlinks_Widget extends WP_Widget {
             foreach($backlinks as $backlink){
                 ?>
                 <li>
-                    <div><small><em><?=esc_html($backlink->time)?></em></small></div>
-                    <a href="<?=esc_html($backlink->referrer)?>" target="_blank" rel="nofollow"><?=esc_html($backlink->domain)?></a>
+                    <div><small><em><?php echo esc_html($backlink->time); ?></em></small></div>
+                    <a href="<?php echo esc_html($backlink->referrer); ?>" target="_blank" rel="nofollow"><?php echo esc_html($backlink->domain); ?></a>
                 </li>
                 <?php
             }
