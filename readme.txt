@@ -81,7 +81,7 @@ This plugin it's released under the GPLv2, you can use it free of charge on your
 
 - bugfix: removed array_shift from a global var
 - mail template update
-- additional checks on  wp_remote_get response
+- additional checks on wp_remote_get response
 
 = 16.03.2014 - v0.9.5b =
 
