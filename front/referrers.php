@@ -89,7 +89,8 @@ if(!class_exists('WPMB_Referrers') && class_exists('WPMB_Config') ){
             */
             if(is_user_logged_in() && isset($WPMB_Config->configs->ignore_roles_referer)){
                 global $current_user;
-                $user_role = array_shift($current_user->roles);
+                $roles = $current_user->roles;
+                $user_role = array_shift($roles);
                 if(in_array($user_role,$WPMB_Config->configs->ignore_roles_referer)){
                     //in admin settings we ignore current role for referer ...
                     return false;

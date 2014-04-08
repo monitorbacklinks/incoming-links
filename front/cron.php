@@ -66,12 +66,12 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
                 			'user-agent'  => 'MonitorBacklinksWP (+http://monitorbacklinks.com/blog/incoming-links/)'
                 	);
                 	$result = wp_remote_get( $referrer->referrer, $args );
-                	if ( 200 == $result['response']['code'] ) {
+                	if ( is_array($result) AND 200 == $result['response']['code'] ) {
                 		$body = $result['body'];
                 	} else{
                 		$body = '';
                 	}	 
-                	
+
                 	$size = strlen($body);
                 	
 					if ((($size*8)/(1024*1024)<2) AND $body){ //Not bigger than 2MB and not empty
