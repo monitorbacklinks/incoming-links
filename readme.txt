@@ -79,7 +79,7 @@ This plugin it's released under the GPLv2, you can use it free of charge on your
 
 = 18.04.2014 - v0.9.7b =
 
-- alert when WP_CRON_DISABLE is set to TRUE 
+- alert when DISABLE_WP_CRON is set to TRUE 
 
 = 08.04.2014 - v0.9.6b =
 
