@@ -4,7 +4,7 @@ Plugin Name: Incoming Links
 Plugin URI: http://monitorbacklinks.com/blog/incoming-links/
 Description: Automatically detects all new incoming links and keeps track of your existing backlinks. 
 Author: Monitor Backlinks
-Version: 0.9.7b
+Version: 0.9.8b
 Author URI: https://monitorbacklinks.com/
 */
 

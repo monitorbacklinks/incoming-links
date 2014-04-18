@@ -141,12 +141,12 @@ if(!class_exists('WPMB_Settings') && class_exists('WPMB_Blocks') ){
                 <div id="post-body" class="metabox-holder columns-2">
                     <!-- main content -->
                     <div id="post-body-content">
+                        <div class="meta-box-sortables ui-sortable">
                                 <?php 
                                 if (defined('DISABLE_WP_CRON') AND DISABLE_WP_CRON AND $settings->cron){ 
-                                	echo "<div class='error' style='margin-top:20px;'><p>" . __( "WP_CRON is disabled. Edit your <strong>wp-config.php</strong> file and set <strong>DISABLE_WP_CRON</strong> to <strong>FALSE</strong>", 'wpmbil' )."!</p></div>";
+                                	echo "<div class='error' style='margin-top:20px;'><p><strong style='color: #dd3d36;'>".__( "Error:",'wpmbil')." </strong>" . __( "WP_CRON is disabled. Pending incoming links won't be verified! Edit your <strong>wp-config.php</strong> file and set <strong>DISABLE_WP_CRON</strong> to <strong>FALSE</strong>", 'wpmbil' )."!</p></div>";
                                 }
-                                ?>                      
-                        <div class="meta-box-sortables ui-sortable">
+                                ?>                        
 	                        <div class="settings-wrapper">
                                 <div class="inside">
                                     <h2><?php _e('General','wpmbil'); ?></h2>
