@@ -269,7 +269,12 @@ if(!class_exists('WPMB_Dashboard') && class_exists('WPMB_Blocks') ){
                         <!-- main content -->
                         <div id="post-body-content">
                             <div class="meta-box-sortables ui-sortable">
-                                <div class="postbox">
+                                <?php 
+                                if (defined('DISABLE_WP_CRON') AND DISABLE_WP_CRON AND $settings->cron){ 
+                                	echo "<div class='error'><p>" . __( "WP_CRON is disabled. Edit your <strong>wp-config.php</strong> file and set <strong>DISABLE_WP_CRON</strong> to <strong>FALSE</strong>", 'wpmbil' )."!</p></div>";
+                                }
+                                ?>
+                            <div class="postbox">
                                     <h3><span><?php echo __('Valid Backlinks ( ','wpmbil').$total.__(' items )','wpmbil'); ?></span></h3>
                                     <div class="inside">
                                         <div class="tablenav-pages">
