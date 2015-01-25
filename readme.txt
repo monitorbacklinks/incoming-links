@@ -1,7 +1,7 @@
 === Incoming Links ===
 Contributors: MonitorBacklinks, deconf
 Tags: incoming, links, backlinks, monitor, incoming links, inbound links, referrers, inlinks, inward links, SEO
-Requires at least: 2.8
+Requires at least: 3.1.0
 Tested up to: 4.1
 Stable tag: 0.9.9b
 License: GPLv2 or later
