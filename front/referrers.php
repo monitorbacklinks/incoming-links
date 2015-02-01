@@ -12,8 +12,8 @@ if(!class_exists('WPMB_Referrers') && class_exists('WPMB_Config') ){
 
         public function init(){
             global $WPMB_Config;
-			
-            $referrer = (isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:'');
+
+            $referrer = (isset($_SERVER['HTTP_REFERER'])?esc_url($_SERVER['HTTP_REFERER']):'');
             $site_host = str_replace("www.", "", $_SERVER["HTTP_HOST"]);
             $ip = $_SERVER['SERVER_ADDR'];
             $site_url = 'http'.(empty($_SERVER['HTTPS'])?'':'s').'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
