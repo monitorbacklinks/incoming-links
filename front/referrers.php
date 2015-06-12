@@ -50,7 +50,7 @@ if(!class_exists('WPMB_Referrers') && class_exists('WPMB_Config') ){
             if(
                 isset($WPMB_Config->configs->exclude_domains_sing_excerpts)
                 && count($WPMB_Config->configs->exclude_domains_sing_excerpts)
-                && $referrer_url_data['path']
+                && isset($referrer_url_data['path'])
             ){
                 foreach($WPMB_Config->configs->exclude_domains_sing_excerpts as $excerpt){
                 	if (preg_match($excerpt,$referrer)) {

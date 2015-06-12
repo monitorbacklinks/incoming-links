@@ -58,7 +58,7 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
             if($referrers){
                 $site_host = str_replace("www.", "", $_SERVER["HTTP_HOST"]);
                 foreach($referrers as $referrer){
-                	
+
                 	$args = array(
                 			'timeout'     => 15,
                 			'redirection' => 0,
@@ -70,19 +70,19 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
                 		$body = $result['body'];
                 	} else{
                 		$body = '';
-                	}	 
+                	}
 
                 	$size = strlen($body);
-                	
+
 					if ((($size*8)/(1024*1024)<2) AND $body){ //Not bigger than 2MB and not empty
-                		try{ 
+                		try{
 	                		$document = phpQuery::newDocumentHTML($body);//parse content
-	                		
+
 		                    $follow = 0;
 		                    $find = false;
 		                    foreach($document->find('a') as $tag){ //go by each link
 		                        $href_data = @parse_url(pq($tag)->attr('href'));
-		                        if(strpos($href_data['host'],$site_host)!==FALSE){ //find the same host
+		                        if(isset($href_data['host']) && strpos($href_data['host'],$site_host)!==FALSE){ //find the same host
 		                            $find = true;
 		                            $anchor_text = pq($tag)->text();
 		                            $rel = pq($tag)->attr('rel');
@@ -98,11 +98,11 @@ if(!class_exists('WPMB_Cron') && class_exists('WPMB_Config') ){
 	                    	phpQuery::unloadDocuments(); //prevent memory leaking
                     	} catch (Exception $e){
                     		$find = false;
-                    	}    	
+                    	}
                 	} else{
                 		$find = false;
                 	}
-                	
+
                     if($find === false){
                         /*Add referrer to ban list*/
                         $WPMB_Blocks->addBlockedReferrer($referrer->referrer);
